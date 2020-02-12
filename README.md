@@ -1,3 +1,37 @@
+["Tim", "Tom", "Jim"].each do |name|
+  if name.start_with?("T")
+    puts "Hi, #{name}"
+  end
+end
+
+def yielding
+  puts "the program is
+  executing the code inside the
+  method"
+  yield 
+  puts "now wer are back in 
+the method"
+end
+
+yielding {puts "the method
+has yielded to the block!"
+
+yielding do 
+  puts "the method has
+yielded to the block!"
+end
+
+def yielding_with_arguments(num)
+  puts "the program is executing the code inside the method"
+  yield(num)
+  puts "now we are back in the method"
+end
+
+yielding_with_arguments(2)
+{|i| puts i *2}
+
+end
+
 # Yield and Blocks
 
 ## Objectives
